@@ -1,11 +1,15 @@
-//El modelo define que datos debe de tener la app
-//Investigar MVC: Modelo = datos Ptron de diseño de software 
-//Vista: Pantalla lo que vemos, Controlador: Lógica :lo uqe va a funcionar
+//el modelo define los datos que debe
+//tener la aplicacion
+//vista:pantalla, controlador:logica
+//MVC: modelo=informacion
+//vista: lo que vemos
 
-class YesNoModel {
-  //atributos de la clase
-  late final String answer;
- late final bool forced;
-  late final String image;
+class YesNoModels {
+  //Atributos de la clase
+  final String answer;
+  final bool forced;
+  final String image;
 
+  YesNoModels(
+      {required this.answer, required this.forced, required this.image});
 }
