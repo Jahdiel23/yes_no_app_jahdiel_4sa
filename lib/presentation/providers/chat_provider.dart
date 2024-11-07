@@ -9,28 +9,31 @@ class ChatProvider extends ChangeNotifier {
   ];
 
   final ScrollController chatScrollController = ScrollController();
+
   final getYesNoAnswer = GetYesNoAnswer();
 
   Future<void> sendMessage(String text) async {
     if (text.trim().isEmpty) return;
 
     final newMessage = Message(text: text, fromWho: FromWho.me);
+    //Añadir el mensaje de mi crush
     messageList.add(newMessage);
 
     // Imprimir la cantidad de mensajes en la consola
     print('Cantidad de mensajes: ${messageList.length}');
 
     if (text.endsWith('?')) {
-      await herReply(); // Asegúrate de esperar la respuesta
+      await himReply(); // Asegúrate de esperar la respuesta
     }
-
+// Notifica si algo de provider cambió para el estado
     notifyListeners();
+    //Mueve el scroll hasta el último mensaje recibido
     moveScrollToBottom();
   }
 
-  Future<void> herReply() async {
-    final herMessage = await getYesNoAnswer.getAnswer();
-    messageList.add(herMessage);
+  Future<void> himReply() async {
+    final himMessage = await getYesNoAnswer.getAnswer();
+    messageList.add(himMessage);
     notifyListeners();
     moveScrollToBottom();
   }

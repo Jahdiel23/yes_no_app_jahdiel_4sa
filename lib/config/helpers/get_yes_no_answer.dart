@@ -17,14 +17,14 @@ class GetYesNoAnswer {
         String answer = response.data['answer'];
         
         // Crear un nuevo mensaje basado en la respuesta
-        return Message(text: answer, fromWho: FromWho.him); // Asegúrate de que 'her' esté definido en tu enumeración FromWho
+        return Message(text: answer, fromWho: FromWho.him); 
       } else {
-        // Manejo de errores si el estado no es 200
-        return Message(text: 'Error al obtener respuesta', fromWho: FromWho.him);
+        // Lanzar un error si el estado no es 200
+        throw UnimplementedError('Error: Estado de respuesta no es 200');
       }
     } catch (e) {
-      // Manejo de excepciones
-      return Message(text: 'Error: $e', fromWho: FromWho.him);
+      throw UnimplementedError();
     }
   }
 }
+
