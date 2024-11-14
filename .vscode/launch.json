@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "yes_no_app_jahdiel_4sa (release mode)",
+            "request": "launch",
+            "type": "dart"
+          },
+          {
+            "name": "yes_no_app_jahdiel_4sa (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+          },
+          {
+            "name": "yes_no_app_jahdiel_4sa (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+          },
+          {
+            "name": "yes_no_app_jahdiel_4sa (chrome)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": ["--web-browser=crhome", "--disable-web-security"]
+         }
+  ]
+  }
+
+
+
